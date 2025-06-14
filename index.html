@@ -19,7 +19,7 @@
             height: 100vh;
             min-height: 100vh;
             background: #111; /* fallback color */
-            background-image: url('GodOne.jpeg');
+            background-image: url('GodOne.webp');
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -132,7 +132,7 @@
         .photo-carousel {
             position: relative;
             width: 100%;
-            max-width: 900px;
+            max-width: 700px;
             aspect-ratio: 16/9;
             margin: 32px auto 0 auto;
             display: flex;
@@ -186,8 +186,9 @@
         .carousel-btn.next { right: -24px; }
         .carousel-btn:active { background: rgba(0,0,0,0.85); }
         @media (max-width: 900px) {
-            .photo-carousel {
-                max-width: 100vw;
+            .photo-carousel,
+            .merch-carousel {
+                max-width: 95vw;
             }
         }
         @media (max-width: 600px) {
@@ -205,7 +206,7 @@
         .merch-carousel {
             position: relative;
             width: 100%;
-            max-width: 900px;
+            max-width: 700px;
             aspect-ratio: 16/9;
             margin: 32px auto 0 auto;
             display: flex;
@@ -278,6 +279,10 @@
 </head>
 <body>
     <div class="hero">
+        <!-- Remove logo/title above the menu -->
+        <!-- <div style="position:absolute;bottom:110px;right:40px;left:auto;transform:none;text-align:right;z-index:2;">
+            <img src="GodOneTagWhite@4x.png" alt="God One Logo" style="max-width:320px;width:40vw;height:auto;display:inline-block;">
+        </div> -->
         <!-- Mobile menu toggle button -->
         <button class="menu-toggle" aria-label="Open menu" onclick="document.querySelector('.nav').classList.toggle('open')">&#9776;</button>
         <nav class="nav">
@@ -292,7 +297,7 @@
     </div>
 
     <section id="show">
-        <h2>Shows</h2>
+        <h2>Upcoming Shows</h2>
         <div style="margin-bottom: 32px;">
             <strong>11e Championnat de Beatbox du Québec</strong><br>
             21 Juin<br>
@@ -399,10 +404,18 @@
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>
-            Email me at
-            <a href="mailto:Admin@godone.ca" style="color:#FFD700;font-weight:bold;">Admin@godone.ca</a>
-        </p>
+        <div style="background:rgba(255,215,0,0.10);border-radius:16px;padding:32px 16px;text-align:center;max-width:420px;margin:32px auto 0 auto;box-shadow:0 2px 16px 0 rgba(0,0,0,0.18);">
+            <p style="font-size:1.3em;color:#FFD700;font-weight:bold;margin-bottom:12px;">
+                For booking, reach out!
+            </p>
+            <a href="mailto:booking@godone.ca"
+               style="display:inline-block;font-size:1.2em;background:#FFD700;color:#111;font-weight:bold;padding:14px 32px;border-radius:32px;text-decoration:none;box-shadow:0 2px 8px 0 rgba(0,0,0,0.12);transition:background 0.2s;">
+                booking@godone.ca
+            </a>
+            <p style="margin-top:18px;color:#fff;opacity:0.8;font-size:1em;">
+                I look forward to connecting with you!
+            </p>
+        </div>
     </section>
 
     <script>
